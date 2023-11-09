@@ -17,4 +17,16 @@ where the number stands for the line in which the command is insert
 
 It seems that is not possible without xdotools
 
+You may also want to create a script similar to this:
+
+##########
+entern () {
+      if [ "$1" ]; then
+        for i in $(seq 1 $1); do echo "${PS1@P}"; done
+      else
+        for i in $(seq 1 10); do echo "${PS1@P}"; done
+      fi
+}
+enter 4
+#########
 
